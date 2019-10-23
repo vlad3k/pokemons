@@ -4,7 +4,7 @@ import "./sets.css";
 const Sets = () => {
   return (
     <div className="sets">
-      <a className="set">
+      <a className="set hvr-grow">
         <div>
           <div className="set-image">
             <img src="https://images.pokemontcg.io/sma/logo.png" alt="" />
@@ -33,7 +33,7 @@ const Sets = () => {
           </div>
         </div>
       </a>
-      <a className="set">
+      <a className="set hvr-grow">
         <div>
           <div className="set-image">
             <img src="https://images.pokemontcg.io/sma/logo.png" alt="" />
@@ -61,7 +61,7 @@ const Sets = () => {
           </div>
         </div>
       </a>
-      <a className="set">
+      <a className="set hvr-grow">
         <div>
           <div className="set-image">
             <img src="https://images.pokemontcg.io/sma/logo.png" alt="" />

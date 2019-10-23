@@ -94,3 +94,16 @@
   margin-left: 2em;
   margin-top: 1em;
 }
+
+.hvr-grow {
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.hvr-grow:active,
+.hvr-grow:focus,
+.hvr-grow:hover {
+  transform: scale(1.1);
+}
