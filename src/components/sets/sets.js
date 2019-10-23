@@ -56,7 +56,6 @@ const Sets = () => {
             <div className="content">
               <ul>
                 <li>Standard Legal</li>
-                <li>Expanded Legal</li>
               </ul>
             </div>
           </div>
