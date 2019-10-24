@@ -1,33 +1,34 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const SetItem = () => {
+const SetItem = ({ set }) => {
   return (
-    <a className="set hvr-grow">
+    <Link to={set.code} className="set hvr-grow">
       <div>
         <div className="set-image">
-          <img src="https://images.pokemontcg.io/sma/logo.png" alt="" />
+          <img src={set.logoUrl} alt="Placeholder" />
         </div>
         <div className="set-content">
           <div className="media">
             <div className="media-left">
               <figure className="image">
-                <img src="https://images.pokemontcg.io/sma/symbol.png" alt="" />
+                <img src={set.symbolUrl} alt="Placeholder" />
               </figure>
             </div>
             <div className="media-content">
-              <p className="title">Shiny Vault</p>
-              <p className="subtitle">Released 08/23/2019</p>
+              <p className="title">{set.name}</p>
+              <p className="subtitle">Released {set.releaseDate}</p>
             </div>
           </div>
           <div className="content">
             <ul>
-              <li>Standard Legal</li>
-              <li>Expanded Legal</li>
+              {set.standardLegal && <li>Standard Legal</li>}
+              {set.expandedLegal && <li>Expanded Legal</li>}
             </ul>
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 

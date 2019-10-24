@@ -1,32 +1,10 @@
-const initialState = {
-  sets: [],
-  cards: []
-};
+import { combineReducers } from "redux";
+import setsReducer from "./sets";
+import cardsReducer from "./cards";
 
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case "FETCH_SETS_REQUEST":
-      return {
-        sets: [],
-        loading: true,
-        error: null
-      };
-    case "FETCH_SETS_SUCCESS":
-      return {
-        sets: action.payload,
-        loading: false,
-        error: null
-      };
-    case "FETCH_SETS_FAILURE":
-      return {
-        sets: action.payload,
-        loading: false,
-        error: action.payload
-      };
-
-    default:
-      return state;
-  }
-};
+const reducer = combineReducers({
+  sets: setsReducer,
+  cards: cardsReducer
+});
 
 export default reducer;

@@ -1,13 +1,9 @@
 import React from "react";
 
-const CardItem = () => {
+const CardItem = ({ name, imageUrl }) => {
   return (
     <div className="card">
-      <img
-        className="hvr-grow"
-        src="https://images.pokemontcg.io/sma/SV1.png"
-        alt=""
-      />
+      <img className="hvr-grow" src={imageUrl} alt={name} />
     </div>
   );
 };
