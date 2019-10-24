@@ -1,9 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { BrowserRouter as Router } from "react-router-dom";
 
-import Sets from "./components/sets";
-import Cards from "./components/cards";
+import App from "./components/app";
+import ErrorBoundry from "./components/error-boundry";
+import PokemonTCG from "./services/pokemontcg";
+import { PokemonTCGProvider } from "./components/pokemontcg-context";
+
+import store from "./store";
 
 import "./index.css";
 
-ReactDOM.render(<Cards />, document.getElementById("root"));
+const pokemonTCG = new PokemonTCG();
+
+ReactDOM.render(
+  <Provider store={store}>
+    <ErrorBoundry>
+      <PokemonTCGProvider value={pokemonTCG}>
+        <Router>
+          <App />
+        </Router>
+      </PokemonTCGProvider>
+    </ErrorBoundry>
+  </Provider>,
+  document.getElementById("root")
+);

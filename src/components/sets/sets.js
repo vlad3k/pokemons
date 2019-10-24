@@ -1,97 +1,19 @@
-import React from "react";
+import React, { Component } from "react";
+import SetItem from "../set-item";
+
 import "./sets.css";
 
-const Sets = () => {
-  return (
-    <div className="sets">
-      <a className="set hvr-grow">
-        <div>
-          <div className="set-image">
-            <img src="https://images.pokemontcg.io/sma/logo.png" alt="" />
-          </div>
-          <div className="set-content">
-            <div className="media">
-              <div className="media-left">
-                <figure className="image">
-                  <img
-                    src="https://images.pokemontcg.io/sma/symbol.png"
-                    alt=""
-                  />
-                </figure>
-              </div>
-              <div className="media-content">
-                <p className="title">Shiny Vault</p>
-                <p className="subtitle">Released 08/23/2019</p>
-              </div>
-            </div>
-            <div className="content">
-              <ul>
-                <li>Standard Legal</li>
-                <li>Expanded Legal</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a className="set hvr-grow">
-        <div>
-          <div className="set-image">
-            <img src="https://images.pokemontcg.io/sma/logo.png" alt="" />
-          </div>
-          <div className="set-content">
-            <div className="media">
-              <div className="media-left">
-                <figure className="image">
-                  <img
-                    src="https://images.pokemontcg.io/sma/symbol.png"
-                    alt=""
-                  />
-                </figure>
-              </div>
-              <div className="media-content">
-                <p className="title">Shiny Vault</p>
-                <p className="subtitle">Released 08/23/2019</p>
-              </div>
-            </div>
-            <div className="content">
-              <ul>
-                <li>Standard Legal</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a className="set hvr-grow">
-        <div>
-          <div className="set-image">
-            <img src="https://images.pokemontcg.io/sma/logo.png" alt="" />
-          </div>
-          <div className="set-content">
-            <div className="media">
-              <div className="media-left">
-                <figure className="image">
-                  <img
-                    src="https://images.pokemontcg.io/sma/symbol.png"
-                    alt=""
-                  />
-                </figure>
-              </div>
-              <div className="media-content">
-                <p className="title">Shiny Vault</p>
-                <p className="subtitle">Released 08/23/2019</p>
-              </div>
-            </div>
-            <div className="content">
-              <ul>
-                <li>Standard Legal</li>
-                <li>Expanded Legal</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  );
-};
+class Sets extends Component {
+  render() {
+    const { sets } = this.props;
+    return (
+      <div className="sets">
+        {sets.map(set => {
+          return <SetItem key={set} />;
+        })}
+      </div>
+    );
+  }
+}
 
 export default Sets;
