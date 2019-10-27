@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SetItem = ({ set }) => {
   return (
-    <Link to={set.code} className="set hvr-grow">
+    <Link to={`/cards/${set.code}`} className="set hvr-grow">
       <div>
         <div className="set-image">
           <img src={set.logoUrl} alt="Placeholder" />

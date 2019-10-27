@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 import { SetsContainer, CardsContainer } from "../../containers";
 
@@ -9,7 +9,8 @@ const App = () => {
   return (
     <Switch>
       <Route path="/" component={SetsContainer} exact />
-      <Route path="/:id" component={CardsContainer} exact />
+      <Route path="/cards/:id" component={CardsContainer} exact />
+      <Redirect to="/" />
     </Switch>
   );
 };

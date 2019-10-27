@@ -1,4 +1,4 @@
 import SetsContainer from "./sets-container";
-import CardsContainer from "./cards-containers";
+import CardsContainer from "./cards-container";
 
 export { SetsContainer, CardsContainer };

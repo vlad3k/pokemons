@@ -1,0 +1,13 @@
+.error-indicator {
+  margin-top: 100px;
+  text-align: center;
+  color: #363636;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.125;
+}
+
+.error-indicator img {
+  width: 100px;
+  height: 100px;
+}
